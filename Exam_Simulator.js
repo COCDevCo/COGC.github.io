@@ -196,7 +196,7 @@ const questions = [
         correctAnswers: [3], //index of "D. wireless LAN controller"
     },
     {
-        question: "A network administrator must enable DHCP serices between two sites. What must be configured for the router to pass DHCPDISCOVER message on to the server?",
+        question: "A network administrator must enable DHCP services between two sites. What must be configured for the router to pass DHCPDISCOVER message on to the server?",
         options: ["A. a DHCP Relay Agent", "B. DHCP Binding", "C. a DHCP Pool", "D. DHCP Snooping"],
         correctAnswers: [0], //index of "A. a DHCP Relay Agent"
     },
