@@ -112,7 +112,7 @@ const questions = [
     {
        question: "An administrator must turn off the Cisco Discovery Protocol on the port configured with last usable address in the 10.0.0.0/30 subnet. Which command set meets the requirement?",
        image: "image006.jpg",
-       options: ["A. #interface gi0/1 #no cdp enable", "B. interface gi0/1 #clear cdp table", "C. #interface gi0/0 #no cdp run", "D. #interfacegi0/0 #no cdp advertise-v2"],
+       options: ["A. #interface gi0/1 #no cdp enable", "B. #interface gi0/1 #clear cdp table", "C. #interface gi0/0 #no cdp run", "D. #interfacegi0/0 #no cdp advertise-v2"],
        correctAnswers: [2], //index of "C. #interface gi0/0 #no cdp run"
     },
     {
@@ -181,7 +181,7 @@ const questions = [
         correctAnswers: [0], // index of "A. read"
     },
     {
-        question: "With REST API, wich standard HTTP header tells a server whick media type is expected by the client?",
+        question: "With REST API, which standard HTTP header tells a server whick media type is expected by the client?",
         options: ["A. Accept-Encoding: gzip, deflate", "B. Accept-Patch: text/example; charset=utf-8", "C. Content-Type: application/json; charset=utf-8", "D. Accept: application/json"],
         correctAnswers: [3], //index of "D. Accept: application/json"
     },
