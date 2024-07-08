@@ -30,7 +30,7 @@ const questions = [
         correctAnswers: [3], // index of "D. OpenFlow"
     },
     {
-       question: "ANetwork Engineer must configure the router R1 GigabitEthernet1/1 interface to connect to the router R2 GigabitEthernet1/1 interface. For the configuration to be applied the engineer must compress the address 2001:0db8:0000:0000:0500:000a:400F:583B. Which command must be issued on the interface?",
+       question: "A Network Engineer must configure the router R1 GigabitEthernet1/1 interface to connect to the router R2 GigabitEthernet1/1 interface. For the configuration to be applied the engineer must compress the address 2001:0db8:0000:0000:0500:000a:400F:583B. Which command must be issued on the interface?",
        options: ["A. ipv6 address 2001:db8:0::500:a:4F:583B", "B. ipv6 address 2001:db8::500:a:400F:583B", "C. ipv6 address 2001::db8:0000::500:a:400F:583B", "D. ipv6 address 2001:0db8::5:a:4F:583B"],
        correctAnswers: [1], // index of "B. ipv6 address 2001:db8::500:a:400F:583B"
     },
