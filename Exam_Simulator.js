@@ -213,7 +213,7 @@ const questions = [
         correctAnswers: [3], //index of "D. The port goes into error-disable state"
     },
     {
-        question: "An engineer must configure traffic for a VLAN that is untagged by the switch as it crosses a truck link. Which command should be used?",
+        question: "An engineer must configure traffic for a VLAN that is untagged by the switch as it crosses a trunk link. Which command should be used?",
         options: ["A. #switchport trunk allowed vlan 10", "B. #switchport trunk native vlan 10", "C. switchport mode trunk", "D. switchport encapsulation dot1q"],
         correctAnswers: [1], //index of "B. #switchport trunk native vlan 10"
     },
