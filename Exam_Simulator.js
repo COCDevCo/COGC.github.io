@@ -181,7 +181,7 @@ const questions = [
         correctAnswers: [0], // index of "A. read"
     },
     {
-        question: "With REST API, which standard HTTP header tells a server whick media type is expected by the client?",
+        question: "With REST API, which standard HTTP header tells a server which media type is expected by the client?",
         options: ["A. Accept-Encoding: gzip, deflate", "B. Accept-Patch: text/example; charset=utf-8", "C. Content-Type: application/json; charset=utf-8", "D. Accept: application/json"],
         correctAnswers: [3], //index of "D. Accept: application/json"
     },
