@@ -261,6 +261,109 @@ const questions = [
         options: ["A. Option A", "B. Option B", "C. Option C", "D. Option D"],
         correctAnswers: [3], //index of "D. Option D"
     },
+    {
+        question: "What term is used to define the software process that creates VMs and performs hardware abstraction to support VMs?",
+        options: ["A. Hypervisor", "B. container", "C. element manager", "D. Virtualized Infrastructure Manager (VIM)"],
+        correctAnswers: [0], //index of "A. Hypervisor"
+    },
+    {
+        question: "Which statement is true regarding the UDP client process during a session with a server?",
+        options: ["A. Datagrams that arrive in a different order than that in which they were sent are not placed in order", "B. A session must be established before datagrams can be exchanged", "C. A three-way handshake takes place before the transmission of data begins", "D. Application servers have to use port numbers above 1024 in order to be UDP capable"],
+        correctAnswers: [0], //index of "A. Datagrams that arrive in a different order than that in which they were sent are not placed in order"
+    },
+    {
+        question: "Which forwarding action does a switch take when the destination MAC address of an Ethernet frame is an unknown unicast?",
+        options: ["A. The switch forwards the frame out a specified port for this type of address", "B. The switch drops the frame", "C. The switch forwards the frame to the default gateway", "D. The switch forwards the frame the same way it does for broadcast and multicast MAC addresses"],
+        correctAnswers: [3], //index of "D. The switch forwards the frame the same way it does for broadcast and multicast MAC addresses"
+    },
+    {
+        question: "What information is added during encapsulation at OSI Layer 3?",
+        options: ["A. source and destination MAC", "B. source and destination application protocol", "C. source and destination port number", "D. source and destination IP address"],
+        correctAnswers: [3], //index of "D. source and destination of IP address"
+    },
+    {
+        question: "Passwords can be used to restrict access to all or parts of the Cisco IOS. Select the modes and interfaces that can be protected with passwords. (Choose three.)",
+        options: ["A. VTY interface", "B. console interface", "C. Ethernet interface", "D. boot IOS mode", "E. privileged EXEC mode", "F. router configuration mode"],
+        correctAnswers: [0,1,4], //index of "A. VTY interface" "B. console interface" "E. privileged EXEC mode"
+    },
+    {
+        question: "Which two statements are true regarding the user EXEC mode? (Choose two.)",
+        options: ["A. All router commands are available", "B. Global configuration mode can be accessed by entering the enable command", "C. The device prompt for this mode ends with the '>' symbol", "D. Interfaces and routing protocols can be configured", "E. Only some aspects of the router configuration can be viewed"],
+        correctAnswers: [2,4], //index of "C. The device prompt for this mode ends with the '>' symbol" "E. Only some aspects of the router configuration can be viewed"
+    },
+    {
+        question: "Why does HTTP use TCP as the transport layer protocol?",
+        options: ["A. to ensure the fastest possible download speed", "B. because HTTP is a best-effort protocol", "C. because transmission errors can be tolerated easily", "D. because HTTP requires reliable delivery"],
+        correctAnswers: [3], //index of "D. because HTTP requires reliable delivery"
+    },
+    {
+        question: "What is the purpose of ICMP messages?",
+        options: ["A. to inform routers about network topology changes", "B. to ensure the delivery of an IP packet", "C. to provide feedback of IP packet tansmissions", "D. to monitor the process of a domain name to IP address resolution"],
+        correctAnswers: [2], //index of "C. to provide feedback of IP packet tansmissions"
+    },
+    {
+        question: "How many bits make up an octet in an IPv4 address?",
+        options: ["A. 4", "B. 8", "C. 16", "D. 32"],
+        correctAnswers: [1], //index of "B. 8 bits"
+    },
+    {
+        question: "A host PC has just booted and is attempting to lease an address through DHCP. Which two messages will the client typically broadcast on the network? (Choose two.)",
+        options: ["A. DHCPDISCOVER", "B. DHCPOFFER", "C. DHCPREQUEST", "D. DHCPACK", "E. DHCPNACK"],
+        correctAnswers: [0,2], //index of "A. DHCPDISCOVER" "C. DHCPREQUEST"
+    },
+    {
+        question: "A network technician is statically assigning an IP address to a PC. The default gateway is correct. What would be a valid IP address to assign to the host?",
+        image: "image013.jpg",
+        options:["A. 128.106.10.100", "B. 128.107.255.1", "C. 128.107.255.1", "D. 128.107.255.254"],
+        correctAnswers: [2], //index of "C. 128.107.255.1"
+    },
+    {
+        question: "Which two characteristics describe Ethernet technology? (Choose two.)",
+        options: ["A. It is supported by IEEE 802.3 standards", "B. It is supported by IEEE 802.5 standards", "C. It typically uses an average of 16 Mbps for data transfer rates", "D.  It uses unique MAC addresses to ensure that data is sent to the appropriate destination", "E. It uses a ring topology"],
+        correctAnswers: [0,3], //
+    },
+    {
+        question: "What subnet mask would be associated with the IPv4 prefix of /28?",
+        options: ["A. 255.255.255.0", "B. 255.255.255.224", "C. 255.255.255.240", "D. 255.255.255.248", "E. 255.255.255.252"],
+        correctAnswers: [2], //index of "C. 255.255.255.240"
+    },
+    {
+        question: "What statement describes the function of the Address Resolution Protocol?",
+        options: ["A. ARP is used to discover the IP address of any host on a different network", "B. ARP is used to discover the IP address of any host on the local network", "C. ARP is used to discover the MAC address of any host on a different network", "D. ARP is used to discover the MAC address of any host on the local network"],
+        correctAnswers: [3], //index of "D. ARP is used to discover the MAC address of any host on the local network"
+    },
+    {
+        question: "Which three IPv4 packet header fields are used to identify and validate the IP packet? (Choose three.)",
+        options: ["A. Fragment Offset", "B. Flags", "C. Header Checksum","D. Time-to-Live", "E. Total Length", "F. Identification"],
+        correctAnswers: [0,1,5],
+    },
+    {
+        question: "Which statement regarding the service password-encryption command is true?",
+        options: ["A. It is configured in privileged EXEC mode", "B. It encrypts only line mode passwords", "C. As soon as the service password-encryption command is entered, all currently set passwords formerly displayed in plain text are encrypted", "D. To see the passwords encrypted by the service password-encryption command in plain text, issue the no service password-encryption command"],
+        correctAnswers: [2], //index of "C. As soon as the service password-encryption command is entered, all currently set passwords formerly displayed in plain text are encrypted"
+    },
+    {
+        question: "What important information is examined in the Ethernet frame header by a Layer 2 device in order to forward the data onward?",
+        options: ["A. spource MAC address", "B. source IP address", "C. destination MAC address", "D. Ethernet type", "E. destination IP address"],
+        correctAnswers: [2], //index of "C. destination MAC address"
+    },
+    {
+        question: "The image shows the UDP segment header. What is the correct sequence of the four fields?",
+        image: "image014.jpg",
+        options: ["A. destination port, source port, length, checksum", "B. source port, destination port, length, checksum", "C. destination port, source port, checksum, length", "D. source port, destination port, checksum, length"],
+        correctAnswers: [1], //index of "B. source port, destination port, length, checksum"
+    },
+    {
+        question: "What is an example of cloud computing?",
+        options: ["A. a continuous interaction between people, processes, data, and things", "B. a service that offers on-demand access to shared resources", "C. a network infrastructure that spans a large geographic area", "D. an architectural style of the World Wide Web"],
+        correctAnswers: [1], //index of "B. a service that offers on-demand access to shared resources"
+    },
+    {
+        question: "Which ICMPv6 message type provides network addressing information to hosts that use SLAAC?",
+        options: ["A. neighbor solicitation", "B. router advertisement", "C. neighbor advertisement", "D. Router solicitation"],
+        correctAnswers: [1], //index of "B. router advertisement"
+    },
+
 
     // Add more questions here...
 ];
