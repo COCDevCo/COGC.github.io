@@ -284,12 +284,12 @@ const questions = [
     {
         question: "Passwords can be used to restrict access to all or parts of the Cisco IOS. Select the modes and interfaces that can be protected with passwords. (Choose three.)",
         options: ["A. VTY interface", "B. console interface", "C. Ethernet interface", "D. boot IOS mode", "E. privileged EXEC mode", "F. router configuration mode"],
-        correctAnswers: [0,1,4], //index of "A. VTY interface" "B. console interface" "E. privileged EXEC mode"
+        correctAnswers: [0, 1, 4], //index of "A. VTY interface" "B. console interface" "E. privileged EXEC mode"
     },
     {
         question: "Which two statements are true regarding the user EXEC mode? (Choose two.)",
         options: ["A. All router commands are available", "B. Global configuration mode can be accessed by entering the enable command", "C. The device prompt for this mode ends with the '>' symbol", "D. Interfaces and routing protocols can be configured", "E. Only some aspects of the router configuration can be viewed"],
-        correctAnswers: [2,4], //index of "C. The device prompt for this mode ends with the '>' symbol" "E. Only some aspects of the router configuration can be viewed"
+        correctAnswers: [2, 4], //index of "C. The device prompt for this mode ends with the '>' symbol" "E. Only some aspects of the router configuration can be viewed"
     },
     {
         question: "Why does HTTP use TCP as the transport layer protocol?",
@@ -320,7 +320,7 @@ const questions = [
     {
         question: "Which two characteristics describe Ethernet technology? (Choose two.)",
         options: ["A. It is supported by IEEE 802.3 standards", "B. It is supported by IEEE 802.5 standards", "C. It typically uses an average of 16 Mbps for data transfer rates", "D.  It uses unique MAC addresses to ensure that data is sent to the appropriate destination", "E. It uses a ring topology"],
-        correctAnswers: [0,3], //
+        correctAnswers: [0, 3], //
     },
     {
         question: "What subnet mask would be associated with the IPv4 prefix of /28?",
@@ -335,7 +335,7 @@ const questions = [
     {
         question: "Which three IPv4 packet header fields are used to identify and validate the IP packet? (Choose three.)",
         options: ["A. Fragment Offset", "B. Flags", "C. Header Checksum","D. Time-to-Live", "E. Total Length", "F. Identification"],
-        correctAnswers: [0,1,5],
+        correctAnswers: [0, 1, 5],
     },
     {
         question: "Which statement regarding the service password-encryption command is true?",
@@ -363,7 +363,58 @@ const questions = [
         options: ["A. neighbor solicitation", "B. router advertisement", "C. neighbor advertisement", "D. Router solicitation"],
         correctAnswers: [1], //index of "B. router advertisement"
     },
-
+    {
+        question: "How does a switch process a frame received on Fa0/1 with the destination MAC address of 0e38.7363.657b when the table is missing the address?",
+        options: ["A. It floods the frame to all interfaces except Fa0/1", "B. It forwards the frame back out of interface Fa0/1", "C. It drops the frame immediately", " D. Itholds the frame until the MAC address timer expires and then drops the frame"],
+        correctAnswers: [0], //index of "A. It floods the frame to all interfaces except Fa0/1"
+    },
+    {
+        question: "What is a benefit of VRRP?",
+        options: ["A. It provides traffic load balancing to destinations that are more than two hops from the source", "B. It provides the default gateway redundancy on a LAN using two or more routers", "C. It allows neighbors to share routing table information between each other", "D. It prevents loops in a Layer 2 LAN by forwarding all traffic to a root bridge, which then makes the final forwarding decision"],
+        correctAnswers: [1], //index of "B. It provides the default gateway redundancy on a LAN using two or more routers"
+    },
+    {
+        question: "Which protocol does an IPv4 host use to obtain a dynamically assigned IP address?",
+        options: ["A. ARP", "B. DNS", "C. CDP", "D. DHCP"],
+        correctAnswers: [3], //index of "D. DHCP"
+    },
+    {
+        question: "An access list is required to permit traffic from any host on interface G0/0 and deny traffic from interface Gi0/1. Which access list must be applied?",
+        image: "image015.jpg",
+        options: ["A. Option A", "B. Option B", "C. Option C", "D. Option D"],
+        correctAnswers: [0], //index of "A. Option A"
+    },
+    {
+        question: "Which condition must be met before an NMS handles an SNMP trap from an agent?",
+        options: ["A. The NMS must be configured on the same router as the SNMP agent", "B. The NMS must receive a trap and an inform message from the SNMP agent within a configured interval", "C. The NMS software must be loaded with the MIB associated with the trap", "D. The NMS must receive the same trap from two different SNMP agents to verify that it is reliable"],
+        correctAnswers: [2], //index of "C. The NMS software must be loaded with the MIB associated with the trap"
+    },
+    {
+        question: "what is a characteristic of a SOHO network?",
+        options: ["A. connects each switch to every other switch in the network", "B. enables multiple users to share a single broadband connection", "C. provides high throughput access for 1000 or more users", "D. includes at least three tiers of devices to provide load balancing and redundancy"],
+        correctAnswers: [1], //"B. enables multiple users to share a single broadband connection"
+    },
+    {
+        question: "Which resource is able to be shared among virtual machines deployed on the same physical server?",
+        options: ["A. applications", "B. operating system", "C. VM configuration file", "D. disk"],
+        correctAnswers: [3], //index of "D. disk"
+    },
+    {
+        question: "Which implementation provides the strongest encryption combination for the wireless environment?",
+        options: ["A. WPA2+AES", "B. WPA+AES", "C. WEP", "D. WPA+TKIP"],
+        correctAnswers: [0], //index of "A. WPA2+AES"
+    },
+    {
+        question: "After running the code in the exhibit, which step reduces the amount of data that the NETCONF server returns to the NETCONF client, to only the interface's configuration?",
+        image: "image016.jpg",
+        options: ["A. Use the xml library to parse the data returned by the NETCONF server for the interface's configuration", "B. Create an XML filter as a string and pass it to get_config() method as an argument","C. Create a JSON filter as a string and pass it to the get_config() method as an argument", "D. Use the JSON library to parse the data returned by the NETCONF server for the interface's configuration"],
+        correctAnswers: [3], //index of "D. Use the JSON library to parse the data returned by the NETCONF server for the interface’s configuration"
+    },
+    {
+        question: "What are two functions of an SDN controller? (Choose two)",
+        options: ["A. coordinating VTNs", "B. Layer 2 forwarding", "C. tracking hosts", "D. managing the topology", "E. protecting against DDoS attacks"],
+        correctAnswers: [0, 3], //index of "A. and D."
+    },
 
     // Add more questions here...
 ];
