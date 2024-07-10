@@ -16,7 +16,6 @@ body {
     width: 300px;
     text-align: center;
     position: static; /* Add this line */
-    image-rendering: auto;
 
 }
 
@@ -89,7 +88,12 @@ body {
     font-weight: bold;
     font-size: larger;
 }
-#image img {
+
+/* New styling for question images */
+#question-container img {
     max-width: 100%;
     height: auto;
+    margin: 20px 0; /* Adds space around the image */
+    display: block; /* Ensures the image is a block element */
 }
+
