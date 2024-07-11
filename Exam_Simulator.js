@@ -423,6 +423,7 @@ let currentQuestion = 0;
 let score = 0;
 let timerInterval;
 let selectedAnswers = [];
+let mistakes = 0;
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -507,6 +508,7 @@ function checkAnswer() {
         correctAnswerElement.textContent = `The correct answers is: ${correctAnswers.map(index => questions[currentQuestion].options[index]).join(", ")}`;
         correctAnswerElement.style.display = "block"; // Show correct answer
         continueButton.style.display = "block"; // Show continue button
+        mistakes++; // Increment mistakes counter
     }
 
     document.getElementById("score").textContent = `Score: ${score}`;
@@ -554,3 +556,37 @@ function startTimer(duration) {
         }
     }, 1000);
 }
+
+function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+        displayQuestion();
+    } else {
+        // Quiz completed
+        clearInterval(timerInterval); // Stop the timer
+        showStatsModal(); // Show statistics modal
+    }
+}
+
+function showStatsModal() {
+    const statsModal = document.getElementById("stats-modal");
+    const statsScore = document.getElementById("stats-score");
+    const statsPercentage = document.getElementById("stats-percentage");
+    const statsMistakes = document.getElementById("stats-mistakes");
+    const statsAccuracy = document.getElementById("stats-accuracy");
+
+    const totalQuestions = questions.length;
+    const percentage = (score / totalQuestions) * 100;
+    const accuracy = ((totalQuestions - mistakes) / totalQuestions) * 100;
+
+    statsScore.textContent = `Score: ${score}/${totalQuestions}`;
+    statsPercentage.textContent = `Overall Percentage: ${percentage.toFixed(2)}%`;
+    statsMistakes.textContent = `Mistakes: ${mistakes}`;
+    statsAccuracy.textContent = `Accuracy: ${accuracy.toFixed(2)}%`;
+
+    statsModal.style.display = "block"; // Display the modal
+}
+
+document.getElementById("try-again-btn").addEventListener("click", () => {
+    window.location.reload(); // Refresh the page to try again
+});
