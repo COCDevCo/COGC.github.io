@@ -201,13 +201,13 @@ const questions = [
         correctAnswers: [0], //index of "A. a DHCP Relay Agent"
     },
     {
-        question: "Refer to the exhibit. PC1 is trying to ping PC3 for the first time and sends out an ARP to S1. Which action is taken by S1?",
+        question: "PC1 is trying to ping PC3 for the first time and sends out an ARP to S1. Which action is taken by S1?",
         image: "image007.jpg",
         options: ["A. It forwards it out G0/3 only", "B. It is flooded out every port except G0/0", "C. It drops the frame", "D. It forwards it out interface G0/2 only"],
         correctAnswers: [1], //index of "B. It is flooded out every port except G0/0"
     },
     {
-        question: "Refer to the exhibit. What is the result if Gig1/11 receives an STP BPDU?",
+        question: "What is the result if Gig1/11 receives an STP BPDU?",
         image: "image008.jpg",
         options: ["A. The port transitions to STP blocking", "B. The pport transitions to the root port", "C. The port immediately transitions to STP forwarding", "D. The port goes into error-disable state"],
         correctAnswers: [3], //index of "D. The port goes into error-disable state"
@@ -344,7 +344,7 @@ const questions = [
     },
     {
         question: "What important information is examined in the Ethernet frame header by a Layer 2 device in order to forward the data onward?",
-        options: ["A. spource MAC address", "B. source IP address", "C. destination MAC address", "D. Ethernet type", "E. destination IP address"],
+        options: ["A. source MAC address", "B. source IP address", "C. destination MAC address", "D. Ethernet type", "E. destination IP address"],
         correctAnswers: [2], //index of "C. destination MAC address"
     },
     {
