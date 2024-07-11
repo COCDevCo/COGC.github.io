@@ -314,7 +314,7 @@ const questions = [
     {
         question: "A network technician is statically assigning an IP address to a PC. The default gateway is correct. What would be a valid IP address to assign to the host?",
         image: "image013.jpg",
-        options:["A. 128.106.10.100", "B. 128.107.255.1", "C. 128.107.255.1", "D. 128.107.255.254"],
+        options:["A. 128.106.10.100", "B. 128.107.225.1", "C. 128.107.255.1", "D. 128.107.255.254"],
         correctAnswers: [2], //index of "C. 128.107.255.1"
     },
     {
