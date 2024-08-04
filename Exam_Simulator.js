@@ -209,7 +209,7 @@ const questions = [
     {
         question: "What is the result if Gig1/11 receives an STP BPDU?",
         image: "image008.jpg",
-        options: ["A. The port transitions to STP blocking", "B. The pport transitions to the root port", "C. The port immediately transitions to STP forwarding", "D. The port goes into error-disable state"],
+        options: ["A. The port transitions to STP blocking", "B. The port transitions to the root port", "C. The port immediately transitions to STP forwarding", "D. The port goes into error-disable state"],
         correctAnswers: [3], //index of "D. The port goes into error-disable state"
     },
     {
@@ -414,6 +414,93 @@ const questions = [
         question: "What are two functions of an SDN controller? (Choose two)",
         options: ["A. coordinating VTNs", "B. Layer 2 forwarding", "C. tracking hosts", "D. managing the topology", "E. protecting against DDoS attacks"],
         correctAnswers: [0, 3], //index of "A. and D."
+    },
+    {
+        question: "If a switch port receives a new frame while it is actively transmitting a previous frame, how does it process the frames?",
+        options: ["A. The previous frame is delivered, the new frame is dropped, and a retransmission request is sent", "B. The new frame is delivered first, the prevous frame is dropped, and a retransmission request is sent.", "c. The two frames are processed and deliered at the same time", "D. The new frame is placed in a queue for transmission after the prevous frame."],
+        correctAnswers: [1], //index of "B. The new frame is delivered, the prevous frame is dropped, and a retransmission request is sent"
+    },
+    {
+        question: "Which WAN topology provides a combination of simplicity quality, and availability?",
+        options: ["A. partial mesh", "B. full mesh", "C. point-to-point", "D. hub-and-spoke"],
+        correctAnswers: [2], //index of "C. point-to-point"
+    },
+    {
+        question: "The ntp server 192.168.0.3 command has been configured on Router1 to make it an NTP client of Router2. Which command must be  configured on Router2 so that it operates in server-only mode and relies only on its internal clock?",
+        image: "image017.jpg",
+        options: ["A. Router2(config)#ntp passive", "B. Router2(config)#ntp master 4", "C. Router2(config)#ntp server 172.17.0.1", "D. Router2(config)#ntp server 192.168.0.2"],
+        correctAnswers: [1], //index of "B. Router2(config)#ntp master 4"
+    },
+    {
+        question: "A network engineer must configured communication between PC A and the Filed Server. To prevent interruption for any other communications, which command must be configured?",
+        image: "image018.jpg",
+        options: ["A. Switch trunk allowed vlan 12", "B. Switchport trunk allowed vlan none", "C. Switchport trunk allowed vlan add 13", "D. Switchport trunk allowed vlan remove 10-11"],
+        correctAnswers: [2], //index of "C. Switchport trunk allowed vlan add 13"
+    },
+    {
+        question: "Why does a switch flood a frame to all ports?",
+        options: ["A. The destination MAC address of the frame is unknown", "B. The source MAC address of the frame is unknown", "C. The source and destination MAC addresses of the frame are the same", "D. The frame has zero destination MAC addresses"],
+        correctAnswers: [0], //index of "A. The destination MAC address of the frame is unknown"
+    },
+    {
+        question: "When DHCP is configured on a router, which command must be entered so the gateway is automatically distributed",
+        options: ["A. default-router", "B. default-gateway", "C. ip helper-address", "D. dns-server"],
+        correctAnswers: [0], //index of "A. default-router"
+    },
+    {
+        question: "What is a network appliance that checks the state of a packet to determine whether the packet is legitimate?",
+        options: ["A. Layer 2 switch", "B. LAN controller", "C. load balancer", " D. firewall"],
+        correctAnswers: [3], //index of "D. firewall"
+    },
+    {
+        question: "How is the native VLAN secured in a network?",
+        options: ["A. separate from other VLANs within the administrative domain", "B. give it a value in the private VLAN range", "C. assign it as VLAN 1", "D. configure it as a different VLAN ID on each end of the link"],
+        correctAnswers: [3], //index of "D. configure it as a different VLAN ID on each end of the link"
+    },
+    {
+        question: "Which command on a port enters the forwarding state immediately when a PC is connected to it?",
+        options: ["A. switch(config)#spanning-tree portfast default", "B. switch(config)#spanning-tree portfast bpduguard default", "C. switch(config-if)#spanning-tree portfast trunk", "D. switch(config-if)#no spanning-tree portfast"],
+        correctAnswers: [2], //index of "C. switch(config-if)#spanning-tree portfast trunk"
+    },
+    {
+        question: "What is the purpose of a southbound API in a control based networking architecture?",
+        options: ["A. facilities communication between the controller and the applications", "B. integrates a controller with other automation and orchestration tool", "C. allows application developers to interact with the network", "D. facilities communication between the controller and the networking hardware"],
+        correctAnswers: [3], //index of "D. facilities communication between the controller and the networking hardware"
+    },
+    {
+        question: "Which switch technology estabishes a netwirk connection immediately when it is plugged in?",
+        options: ["A. UplinkFast", "B. PortFast", "C. BPDU guard", "D. BackboneFast"],
+        correctAnswers: [1], //index of "B. PortFast"
+    },
+    {
+        question: "What causes a port to be placed in the err-disabled state?",
+        options: ["A. latency", "B. nothing plugged into the port", "C. shutdown command issued on the port", "D. port security violation"],
+        correctAnswers: [3], //index of "D. Port security violation"
+    },
+    {
+        question: "Which technology is appropiate for communicaion between an SDN controller and applications running over the network?",
+        options: ["A. OpenFlow","B. Southbound API", "C. NETCONF", "D. REST API"],
+        correctAnswers: [3], //index of "D. REST API"
+    },
+    {
+        question: "Which security program element involves installing badge readers on data-center doors to allow workers to enter and exit based on their job roles?",
+        options: ["A. physical acccess control", "B. biometrics", "C. role-based access control", "D. multifactor authentication"],
+        correctAnswers: [2], //index of "C. role-based access control"
+    },
+    {
+        question: "What is a characteristic of private IPv4 addressing?",
+        options: ["A. used without tracking or registration", "B. issued by IANA in conjunction with an autonomous system number", "C. traverse the Internet when an outbound ACL is applied", "D. composed of up to 65,536 available address"],
+        correctAnswers: [0], //index of "A. used without tracking or registration"
+    },
+    {
+        question: "Which network action occurs within the data plane?",
+        options: ["A. compare the destination IP address to the IP routing table", "B. make a configureation change froma an incoming NETCONF RPC", "C. run routing protocols (OSPF, EIGRIP, RIP, BGP", "D. reply to an incoming ICMP echo request"],
+        correctAnswers: [3], //index of "D. reply to an incoming ICMP echo request"
+    },
+    {
+        question: "Which two statements about the purpose of OSI model are accurate?",
+        options: ["A. Defines the network functions that occur at each layer", "B Facilitates an understanding of how information travels throughout a network", "C. Changes in one layer do not impact other layer", "D. Ensures reliable data delivery through its layered approach"],
+        correctAnswers: [0, 1], //index of "A. and B."
     },
 
     // Add more questions here...
