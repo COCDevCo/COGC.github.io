@@ -1,40 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C O G C - Exam Simulator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUG PH</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
 </head>
 <body>
-    <div id="quiz-container">
-        <button id="start-btn">Let's do this!</button>
-        <div id="quiz-content" style="display: none;">
-            <div id="question-container">
-                <div id="question-number"></div>
-                <div id="question-index"></div>
-                <div id="question"></div>
-                <img id="question-image" src="" style="display: none;" alt="Question Image">
-                <div id="options"></div>
-                <div id="message"></div>
-                <div id="correct-answer" style="display: none;"></div>
-                <button id="continue-btn" style="display: none;">Let's Go</button>
-            </div>
-            <div id="score"></div>
-            <div id="timer"></div>
+  <div class="background"></div>
+  <div class="main-container">
+    <div class="profile-container" id="profile-container" style="display:none;">
+      <img id="profile-photo" src="default-profile.png" alt="Profile Photo">
+      <h2 id="profile-name"></h2>
+      <div id="profile-flags"></div>
+      <div class="profile-details">
+        <p id="profile-gender">Gender: </p>
+        <p id="profile-age">Age: </p>
+        <p id="profile-birthday">Birthday: </p>
+        <p id="profile-height">Height: </p>
+        <p id="profile-weight">Weight: </p>
+        <p id="profile-positionPlayed">Position Played: </p>
+      </div>
+      <div class="profile-stats">
+        <p id="player-stats"></p>
+      </div>
+      <button id="edit-profile-button">Edit Profile</button>
+      <button id="logout-button">Logout</button>
+    </div>
+    <div class="form-container" id="landing-container">
+      <h1 class="title">Basketball PUG Ph</h1>
+      <p class="welcome-note">Join us! Let's go!</p>
+      <button id="register-button">Register</button>
+      <button id="login-button">Login</button>
+    </div>
+    <div class="form-container" id="register-container" style="display:none;">
+      <h1 class="title">Register</h1>
+      <form id="registerForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <div class="form-container" id="login-container" style="display:none;">
+      <h1 class="title">Let's do this!</h1>
+      <form id="loginForm">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="activity-container" id="activity-container" style="display:none;">
+      <h1 class="title">it's game time!</h1>
+      <div class="button-container">
+        <button id="join-club-button">Join a Club</button>
+        <button id="create-club-button" style="display:none;">Create a Club</button>
+      </div>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'NewsFeeds')">News Feeds</button>
+        <button class="tablinks" onclick="openTab(event, 'Events')">Events</button>
+        <button class="tablinks" onclick="openTab(event, 'LivePUG')">Live PUG Around You</button>
+      </div>
+      <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <div>
+          <label for="club-select">Select a Club:</label>
+          <select id="club-select"></select>
         </div>
+        <div id="club-list">
+          <!-- List of clubs will be rendered here -->
+        </div>
+        <div id="calendar-container">
+          <input type="date" id="calendar">
+          <div id="game-form-container" style="display:none;">
+            <form id="createGameForm">
+              <input type="text" id="game-title" placeholder="Event/Game Title" required>
+              <input type="text" id="game-location" placeholder="Pin on Map Location" required>
+              <input type="date" id="game-date" required>
+              <input type="time" id="game-time" required>
+              <input type="number" id="game-duration" placeholder="Duration of Event (minutes)" required>
+              <input type="number" id="game-set-duration" placeholder="Duration of Each Game Set (minutes)" required>
+              <input type="number" id="game-max-players" placeholder="Max Players" required>
+              <input type="number" id="game-reputation-reward" placeholder="Reputation Reward" required>
+              <button type="submit">Create Game</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="NewsFeeds" class="tabcontent">
+        <h3>News Feeds</h3>
+        <p>Latest news from the basketball community.</p>
+      </div>
+      <div id="Events" class="tabcontent">
+        <h3>Events</h3>
+        <div id="events-list">
+          <!-- Upcoming events will be rendered here -->
+        </div>
+      </div>
+      <div id="LivePUG" class="tabcontent">
+        <h3>Live PUG Around You</h3>
+        <div id="map"></div>
+      </div>
     </div>
-    <div id="stats-modal" class="modal" style="display: none;">
+  </div>
+  <div class="modal" id="edit-profile-modal" style="display:none;">
     <div class="modal-content">
-        <h2>Your Exam Statistics</h2>
-        <p id="stats-score"></p>
-        <p id="stats-percentage"></p>
-        <p id="stats-mistakes"></p>
-        <p id="stats-accuracy"></p>
-        <button id="try-again-btn">Try Again</button>
+      <span class="close-button" id="close-modal-button">&times;</span>
+      <h2>Edit Profile</h2>
+      <form id="profileForm">
+        <input type="text" id="edit-profile-name" placeholder="Name" required>
+        <input type="text" id="edit-profile-gender" placeholder="Gender">
+        <input type="number" id="edit-profile-age" placeholder="Age">
+        <input type="date" id="edit-profile-birthday" placeholder="Birthday">
+        <input type="number" id="edit-profile-height" placeholder="Height (cm)">
+        <input type="number" id="edit-profile-weight" placeholder="Weight (kg)">
+        <input type="text" id="edit-profile-positionPlayed" placeholder="Position Played">
+        <select id="edit-profile-nationality1" placeholder="Nationality 1">
+          <option value="">Select Nationality 1</option>
+        </select>
+        <select id="edit-profile-nationality2" placeholder="Nationality 2">
+          <option value="">Select Nationality 2</option>
+        </select>
+        <input type="file" id="edit-profile-photo" accept="image/*">
+        <button type="submit">Update Profile</button>
+      </form>
     </div>
-</div>
-
-    <script src="Exam_Simulator.js"></script>
+  </div>
+  <div class="modal" id="create-club-modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-button" id="close-create-club-modal-button">&times;</span>
+      <h2>Create a Club</h2>
+      <form id="createClubForm">
+        <input type="text" id="club-ambassador" placeholder="Club Ambassador" readonly>
+        <input type="text" id="club-name" placeholder="Club Name" required>
+        <input type="file" id="club-logo" accept=".png">
+        <textarea id="club-history" placeholder="Brief History"></textarea>
+        <input type="number" id="club-year" placeholder="Year Established" required>
+        <input type="text" id="club-location" placeholder="Location" required>
+        <div id="club-admins-container">
+          <input type="text" id="club-admins" placeholder="Add Admin Member">
+          <button type="button" id="add-admin-button">Add</button>
+        </div>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="delete-club-modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-button" id="close-delete-club-modal-button">&times;</span>
+      <h2>Delete Club</h2>
+      <p>Are you sure you want to delete this club? This action cannot be undone.</p>
+      <input type="password" id="delete-club-password" placeholder="Enter your password" required>
+      <button id="delete-club-button">Delete Club</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
 </body>
 </html>
